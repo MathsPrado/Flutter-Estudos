@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyCoolApp());
 
 class MyCoolApp extends StatelessWidget {
+  void answerQuestion() {
+    print('You Choose ');
+  }
+
   @override
   Widget build(BuildContext context) {
     var questions = [
@@ -18,9 +22,12 @@ class MyCoolApp extends StatelessWidget {
         body: Column(
           children: [
             Text('The Question!'),
-            RaisedButton( child: Text('Answer 1'), onPressed: null,),
-            RaisedButton( child: Text('Answer 2'), onPressed: null),
-              RaisedButton( child: Text('Answer 3'), onPressed: null),
+            RaisedButton(
+              child: Text('Answer 1'),
+              onPressed: answerQuestion
+            ),
+            RaisedButton(child: Text('Answer 2'), onPressed: answerQuestion),
+            RaisedButton(child: Text('Answer 3'), onPressed: answerQuestion),
           ],
         ),
       ),
