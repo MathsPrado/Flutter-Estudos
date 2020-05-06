@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-void main() {
-  runApp(MyCoolApp());
-}
+
+void main() => runApp(MyCoolApp());
+
 class MyCoolApp extends StatelessWidget {
- Widget build(BuildContext context){
-   return MaterialApp(home: Text('Hello World!'),);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My First App'),
+        ),
+        body: Text('This is My Defoult Text!'),
+      ),
+    );
   }
 }
